@@ -310,7 +310,7 @@ export default function Home() {
 
 {/* PHONE */}
 <a
-  href="tel:+984975732"
+  href="tel:+66984975732"
   target="_self"
   onClick={(e) => {
     e.stopPropagation();
