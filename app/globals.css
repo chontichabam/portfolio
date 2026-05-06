@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/* =========================
+   DESIGN SYSTEM (REFINED)
+========================= */
+
+:root {
+  --bg: #070a0f;
+  --text: #e6e6e6;
+  --muted: #9aa4b2;
+
+  --cyan: #38e8ff;
+  --blue: #4f7cff;
+  --purple: #a78bfa;
+  --green: #34d399;
+}
+
+/* =========================
+   BASE
+========================= */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: radial-gradient(circle at top, #0b1220, #070a0f 60%);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui;
+  overflow-x: hidden;
+  letter-spacing: 0.2px;
+}
+
+/* subtle noise */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("https://www.transparenttextures.com/patterns/noise.png");
+}
+
+/* selection */
+::selection {
+  background: rgba(56, 232, 255, 0.25);
+  color: white;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section-hero {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(56, 232, 255, 0.14), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(79, 124, 255, 0.10), transparent 55%);
+}
+
+.section-projects {
+  background: radial-gradient(circle at 30% 20%, rgba(167, 139, 250, 0.10), transparent 45%);
+}
+
+.section-experience {
+  background: radial-gradient(circle at 70% 30%, rgba(52, 211, 153, 0.06), transparent 55%);
+}
+
+/* =========================
+   CARD (SENIOR STYLE)
+========================= */
+
+.card {
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(16px);
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(56, 232, 255, 0.35);
+  box-shadow: 0 20px 50px rgba(56, 232, 255, 0.08);
+}
+
+/* =========================
+   INPUT FEEL
+========================= */
+
+input, textarea {
+  transition: all 0.2s ease;
+}
+
+input:focus, textarea:focus {
+  transform: translateY(-1px);
+  outline: none;
+  border-color: rgba(56, 232, 255, 0.4);
+}
+
+/* =========================
+   LINKS / BUTTONS
+========================= */
+
+button, a {
+  transition: all 0.25s ease;
+}
+
+button:hover, a:hover {
+  transform: translateY(-1px);
+}
+
+
+/* ===== ULTRA POLISH LAYER ===== */
+
+input, textarea {
+  transition: all 0.25s ease;
+}
+
+input:focus, textarea:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 1px rgba(56, 232, 255, 0.2);
+}
+
+/* smoother hover feel */
+a, button {
+  will-change: transform;
+}
+
+/* glass depth refinement */
+.backdrop-blur-xl {
+  backdrop-filter: blur(18px);
+}
+
+/* =========================
+   CURSOR GLOW (VERCEL STYLE)
+========================= */
+
+.cursor-glow {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(56,232,255,0.35), transparent 60%);
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  mix-blend-mode: screen;
+}
