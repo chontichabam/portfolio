@@ -318,7 +318,7 @@ export default function Home() {
   className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-[#38e8ff] transition"
 >
   <FaPhone className="text-green-400" />
-  <span>+98-497-5732</span>
+  <span>+66984975732</span>
 </a>
 
 {/* EMAIL */}
