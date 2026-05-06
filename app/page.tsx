@@ -59,8 +59,7 @@ const skillsRight = [
 ];
 
 
-
-function SectionHeader({ title }) {
+function SectionHeader({ title }: { title: string }) {
   return (
     <div className="mb-10">
 
